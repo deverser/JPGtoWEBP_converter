@@ -2,6 +2,8 @@
 
 mkdir converted
 
+rename 's/\.jpeg/\.jpg/' *.jpeg
+
 for file in *.jpg; do
    echo -n Converting ${file}...
    convert -auto-orient -quality 70% "$file" "converted/$file.webp"
